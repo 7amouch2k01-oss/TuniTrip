@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-hand: 'Caveat', cursive;
+
+  --color-teal-deep: #0A4D68;
+  --color-teal-med: #088395;
+  --color-teal-light: #05A0B5;
+  --color-teal-ice: #E8F6F8;
+  --color-sand-bg: #FAF7F2;
+  --color-sand-card: #FFFFFF;
+  --color-sand-border: #EADBCE;
+  --color-gold-accent: #C5A059;
+  --color-gold-bright: #D4AF37;
+  --color-terracotta: #D96B43;
+  --color-charcoal: #111827;
+}
+
+/* Base custom styles */
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #1E293B;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 219, 206, 0.7);
+}
+
+.glass-panel-dark {
+  background: rgba(10, 77, 104, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: inherit;
+  font-family: var(--font-sans) !important;
+}
+
+.custom-map-pin {
+  background: transparent;
+  border: none;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.animate-shimmer::after {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+  content: '';
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Subtle image scale on hover */
+.img-zoom-hover {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-hover:hover {
+  transform: scale(1.03);
+}
+
+/* Connected AI to Workspace Real-time Flash */
+@keyframes connectedFlash {
+  0% {
+    box-shadow: 0 0 0 2px rgba(8, 131, 149, 0.4), 0 0 20px rgba(8, 131, 149, 0.15);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.animate-connected-update {
+  animation: connectedFlash 1.6s ease-out;
+}
+
+/* Custom subtle scrollbar for panels */
+.panel-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.panel-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.panel-scroll::-webkit-scrollbar-thumb {
+  background: #EADBCE;
+  border-radius: 9999px;
+}
+.panel-scroll::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
