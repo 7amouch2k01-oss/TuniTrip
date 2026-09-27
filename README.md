@@ -349,5 +349,38 @@ If you are an AI agent extending or modifying this codebase:
 
 ---
 
+## 🌟 10. NOVA Core Architecture (Target Production Engine)
+
+The repository includes the target production architecture located in [`src/nova/`](file:///src/nova/) and [`supabase/`](file:///supabase/):
+
+```
+Browser / Client (src/services/novaClient.ts)
+   │
+   ▼ (SSE / HTTP Bearer JWT)
+Supabase Edge Function (supabase/functions/nova-agent/index.ts)
+   │
+   ▼
+NovaOrchestrator (src/nova/core/orchestrator.ts)
+   ├── Multi-Turn Memory Window (src/nova/conversation/manager.ts)
+   ├── Intent & Profile Extraction (src/nova/extraction/tripProfile.ts)
+   ├── LLM Provider Factory (Gemini active, NVIDIA Brev staged)
+   └── Nova Tool Registry (src/nova/tools/registry.ts)
+         ├── search_places (pgvector cosine RAG + fallback)
+         ├── get_place_details (verified pricing & hours)
+         ├── build_itinerary (geographic pacing)
+         ├── calculate_budget (multi-currency + 15% buffer)
+         └── optimize_route (Tunisian driving transit matrix)
+```
+
+### Verification & Testing
+Run the complete automated verification suite:
+```bash
+npm run typecheck   # TypeScript strict check (0 errors)
+npm run smoke       # Core components lifecycle smoke test
+npm run verify      # Full 13-test architectural invariant suite
+```
+
+---
+
 ## 📄 License
 This project is open-source under the [MIT License](LICENSE).

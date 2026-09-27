@@ -8,9 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "tsx src/tests/scenario.test.ts"
+    "test": "tsx src/tests/scenario.test.ts",
+    "typecheck": "tsc -b",
+    "smoke": "tsx src/tests/smoke.test.ts",
+    "verify": "tsx src/tests/verify.test.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "@tailwindcss/vite": "^4.3.3",
     "@types/canvas-confetti": "^1.9.0",
     "@types/leaflet": "^1.9.22",
