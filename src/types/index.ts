@@ -135,15 +135,84 @@ export interface ToolExecutionStep {
   details?: string;
 }
 
+export interface StructuredTripProfile {
+  travelers: number;
+  duration_days: number;
+  destination_country: string;
+  destination_regions: string[];
+  budget: {
+    amount: number;
+    currency: Currency;
+  };
+  traveler_type: 'family' | 'couple' | 'solo' | 'friends' | 'business';
+  interests: string[];
+  inferred_categories: string[];
+  preferred_pace: 'relaxed' | 'moderate' | 'fast-paced';
+  priorities: string[];
+}
+
+export interface ResearchSearchPlan {
+  searchCategories: string[];
+  targetQueries: string[];
+  mustIncludeFeatures: string[];
+  budgetConstraintPerNightUSD: number;
+  maxDriveTimeMinutesPerDay: number;
+}
+
+export interface NormalizedPlaceItem {
+  id: string;
+  name: string;
+  category: PlaceCategory;
+  subcategory: string;
+  location: string;
+  city: string;
+  region: string;
+  coordinates: { latitude: number; longitude: number };
+  description: string;
+  rating: number;
+  review_count: number;
+  price_level: number;
+  exact_price: number;
+  currency: Currency;
+  opening_hours: string;
+  website?: string;
+  phone?: string;
+  photos: string[];
+  amenities: string[];
+  tags: string[];
+  family_friendly: boolean;
+  quietness: number; // 1 to 10
+  historical_value: number; // 1 to 10
+  water_access: boolean;
+  source: string;
+  source_url: string;
+  last_checked: string;
+  isVerified: boolean;
+  matchReason?: string;
+  relevanceScore?: number;
+  matchExplanation?: string;
+}
+
+export interface ProactiveInsight {
+  type: 'route_synergy' | 'budget_warning' | 'pace_tip' | 'family_convenience';
+  title: string;
+  description: string;
+  actionLabel?: string;
+}
+
 export interface AgentStructuredResponse {
   messageText: string;
   profile?: TripProfile;
+  structuredProfile?: StructuredTripProfile;
+  searchPlan?: ResearchSearchPlan;
   recommendations?: PlaceItem[];
+  allDiscoveredPlaces?: NormalizedPlaceItem[];
+  proactiveInsights?: ProactiveInsight[];
   itinerary?: ItineraryDay[];
   planModes?: PlanMode[];
   activePlanId?: string;
   budget?: BudgetBreakdown;
-  sources?: { name: string; url: string; context: string }[];
+  sources?: { name: string; url: string; context: string; checkedAt?: string }[];
   readyForConfirmation?: boolean;
   suggestedPrompts?: string[];
 }
@@ -171,3 +240,26 @@ export interface BookingItem {
   bookingUrl: string;
   lastUpdated: string;
 }
+
+export type PlanStatus = 'confirmed' | 'pending_confirmation' | 'draft';
+
+export interface TripPlan {
+  id: string;
+  title: string;
+  createdAt: string;
+  updatedAt: string;
+  status: PlanStatus;
+  destination: string;
+  coverImage?: string;
+  profile: TripProfile;
+  itinerary: ItineraryDay[];
+  budget: BudgetBreakdown;
+  activePlanModeId: string;
+  planModes: PlanMode[];
+  messages: ChatMessage[];
+  currentToolSteps: ToolExecutionStep[];
+  bookingConfirmationCode?: string;
+  confirmedAt?: string;
+  notes?: string;
+}
+

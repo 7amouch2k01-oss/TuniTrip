@@ -22,37 +22,37 @@
 /* Base custom styles */
 body {
   font-family: var(--font-sans);
-  background-color: #FAF7F2;
-  color: #1E293B;
+  background-color: #FFFFFF;
+  color: #171717;
   overflow-x: hidden;
 }
 
 h1, h2, h3, .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
 }
 
 .font-serif {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 
 .font-hand {
-  font-family: var(--font-hand);
+  font-family: var(--font-sans);
 }
 
 /* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #F4EFE6;
+  background: #FAFAFA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #E5E5E5;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #A3A3A3;
 }
 
 /* Glassmorphism helpers */

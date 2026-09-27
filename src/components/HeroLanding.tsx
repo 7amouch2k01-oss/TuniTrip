@@ -62,27 +62,105 @@ export const HeroLanding: React.FC<HeroLandingProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-black/30" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-12 lg:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-10 lg:pt-16">
         
-        {/* Editorial Eyebrow */}
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-6 h-0.5 bg-[#D4AF37]" />
-          <span className="text-xs uppercase font-extrabold tracking-widest text-[#D4AF37]">
+        {/* Ambient Backlight Glow for the Title */}
+        <div className="absolute -top-12 -left-12 w-96 sm:w-[540px] h-96 sm:h-[540px] bg-radial from-amber-400/20 via-[#088395]/15 to-transparent blur-3xl pointer-events-none -z-10" />
+
+        {/* Editorial Eyebrow Floating Glass Pill */}
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-xl mb-6">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400" />
+          </span>
+          <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
+          <span className="text-[11px] uppercase font-extrabold tracking-[0.2em] text-amber-200">
             DISCOVER TUNISIA
+          </span>
+          <span className="text-white/40">•</span>
+          <span className="text-[11px] font-medium text-slate-200 tracking-wide">
+            Intelligent Travel Architect
+          </span>
+          <span className="text-white/30 hidden sm:inline">|</span>
+          <span className="text-[11px] font-serif text-amber-100/80 hidden sm:inline tracking-wider">
+            تونس الخضراء 🇹🇳
           </span>
         </div>
 
         {/* Huge Editorial Headline */}
-        <div className="max-w-3xl">
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] mb-6">
-            Real People. <br />
-            <span className="italic font-normal text-amber-200">Authentic Tunisia.</span>
+        <div className="max-w-3xl relative">
+          {/* Subtle Cultural Calligraphy Watermark in Background */}
+          <div className="absolute -top-10 -left-6 sm:-left-12 select-none pointer-events-none opacity-[0.08] font-serif text-8xl sm:text-[11rem] lg:text-[13rem] font-bold tracking-widest text-amber-100 leading-none">
+            تونس
+          </div>
+
+          <h1 className="relative font-serif tracking-tight leading-[1.04] mb-6 select-none">
+            <span className="block text-4xl sm:text-6xl lg:text-[5.2rem] font-bold text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
+              Experience Tunisia.
+            </span>
+            <span className="relative inline-block mt-1 sm:mt-2 text-4xl sm:text-6xl lg:text-[5.5rem]">
+              <span className="font-serif italic font-normal bg-gradient-to-r from-amber-100 via-[#FFE79A] to-[#F59E0B] bg-clip-text text-transparent drop-shadow-[0_6px_32px_rgba(245,158,11,0.35)]">
+                Designed by Local AI.
+              </span>
+              {/* Luxury Handcrafted Wave Underline Flourish */}
+              <svg
+                className="absolute -bottom-3 sm:-bottom-4 left-0 w-full h-3 sm:h-5 text-amber-400 overflow-visible"
+                viewBox="0 0 350 20"
+                fill="none"
+              >
+                <defs>
+                  <linearGradient id="tunisiaGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#C5A059" stopOpacity="0.2" />
+                    <stop offset="25%" stopColor="#FDE68A" stopOpacity="0.9" />
+                    <stop offset="70%" stopColor="#D4AF37" stopOpacity="1" />
+                    <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.15" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M4 14 Q 90 2, 180 12 T 346 10"
+                  stroke="url(#tunisiaGoldGrad)"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
           </h1>
 
-          <p className="text-base sm:text-xl text-slate-100 font-normal leading-relaxed max-w-2xl mb-10 drop-shadow-sm">
-            Explore Tunisia like a local. Discover its cities, beaches, ancient ruins, and hidden gems.
-            Plan your journey with an intelligent local AI travel companion that understands your preferences and budget.
+          <p className="text-base sm:text-xl text-slate-100/95 font-normal leading-relaxed max-w-2xl mb-6 drop-shadow-md">
+            Explore Tunisia like a local. From the jasmine-draped alleys of{' '}
+            <span className="text-amber-200 font-semibold underline decoration-amber-400/50 decoration-1 underline-offset-4">
+              Sidi Bou Said
+            </span>{' '}
+            to Roman{' '}
+            <span className="text-amber-200 font-semibold underline decoration-amber-400/50 decoration-1 underline-offset-4">
+              El Jem
+            </span>
+            ,{' '}
+            <span className="text-amber-200 font-semibold underline decoration-amber-400/50 decoration-1 underline-offset-4">
+              Carthage Land
+            </span>
+            , and golden{' '}
+            <span className="text-amber-200 font-semibold underline decoration-amber-400/50 decoration-1 underline-offset-4">
+              Sahara
+            </span>{' '}
+            dunes — plan with an intelligent local AI travel architect that respects your pace and budget.
           </p>
+
+          {/* Quick Highlight Feature Pills */}
+          <div className="flex flex-wrap items-center gap-2 mb-8">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/15 text-[11px] font-medium text-slate-200">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#088395]" />
+              1,148 km Mediterranean Coastline
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/15 text-[11px] font-medium text-slate-200">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+              UNESCO World Heritage & Colosseums
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/15 text-[11px] font-medium text-slate-200">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D96B43]" />
+              Live Smart Budgeting in TND / USD
+            </span>
+          </div>
         </div>
 
         {/* Floating Pill Search Bar (Matching Reference Image) */}

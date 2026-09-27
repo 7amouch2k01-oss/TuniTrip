@@ -35,8 +35,8 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
         attributionControl: false,
       });
 
-      // CartoDB Voyager tiles (clean, light, Mediterranean aesthetic)
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      // CartoDB Positron tiles (clean, architectural monochrome grayscale)
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         maxZoom: 19,
         subdomains: 'abcd',
       }).addTo(map);
@@ -115,40 +115,11 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
 
     const bounds = L.latLngBounds([]);
 
-    // Custom marker icon creator
-    const createIcon = (category: string, isSelected: boolean) => {
-      let bg = '#088395'; // teal default
-      let iconChar = '📍';
-
-      switch (category) {
-        case 'theme_park':
-          bg = '#EA580C'; // coral
-          iconChar = '🎡';
-          break;
-        case 'hotel':
-          bg = '#0A4D68'; // deep ocean teal
-          iconChar = '🏨';
-          break;
-        case 'history':
-          bg = '#C5A059'; // antique gold
-          iconChar = '🏛️';
-          break;
-        case 'beach':
-          bg = '#0284C7'; // azure
-          iconChar = '🏖️';
-          break;
-        case 'food':
-          bg = '#059669'; // emerald
-          iconChar = '🍽️';
-          break;
-        case 'calm_escape':
-          bg = '#7C3AED'; // violet
-          iconChar = '☕';
-          break;
-      }
-
-      const size = isSelected ? 42 : 34;
-      const border = isSelected ? '3px solid #F59E0B' : '2px solid #FFFFFF';
+    // Custom marker icon creator (Monochrome ChatGPT aesthetic)
+    const createIcon = (_category: string, isSelected: boolean) => {
+      const bg = isSelected ? '#000000' : '#262626';
+      const size = isSelected ? 34 : 26;
+      const border = isSelected ? '3px solid #000000' : '2px solid #FFFFFF';
 
       return L.divIcon({
         className: 'custom-map-pin',
@@ -159,15 +130,17 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
             height: ${size}px;
             border-radius: 50%;
             border: ${border};
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: ${isSelected ? '20px' : '16px'};
-            transition: all 0.3s ease;
+            color: #ffffff;
+            font-size: ${isSelected ? '12px' : '10px'};
+            font-weight: 700;
+            transition: all 0.2s ease;
             cursor: pointer;
           ">
-            ${iconChar}
+            ●
           </div>
         `,
         iconSize: [size, size],
@@ -186,13 +159,13 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
 
       // Popup
       const popupContent = document.createElement('div');
-      popupContent.className = 'p-1 text-slate-800 text-sm max-w-[220px] font-sans';
+      popupContent.className = 'p-1 text-neutral-900 text-sm max-w-[220px] font-sans';
       popupContent.innerHTML = `
         ${pt.imageUrl ? `<img src="${pt.imageUrl}" alt="${pt.title}" class="w-full h-24 object-cover rounded-lg mb-2" />` : ''}
-        <div class="font-bold text-slate-900 leading-tight mb-1">${pt.title}</div>
-        <div class="text-xs text-slate-500 mb-2 flex items-center justify-between">
+        <div class="font-bold text-neutral-900 leading-tight mb-1">${pt.title}</div>
+        <div class="text-xs text-neutral-500 mb-2 flex items-center justify-between">
           <span>📍 ${pt.city}</span>
-          ${pt.costUSD !== undefined ? `<span class="font-semibold text-[#088395]">${pt.costUSD > 0 ? `$${pt.costUSD}` : 'Free'}</span>` : ''}
+          ${pt.costUSD !== undefined ? `<span class="font-bold text-neutral-900">${pt.costUSD > 0 ? `$${pt.costUSD}` : 'Free'}</span>` : ''}
         </div>
       `;
 
@@ -216,10 +189,10 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
 
       if (routeCoords.length > 1) {
         polylineRef.current = L.polyline(routeCoords, {
-          color: '#088395',
-          weight: 3,
-          dashArray: '6, 8',
-          opacity: 0.7,
+          color: '#171717',
+          weight: 2.5,
+          dashArray: '5, 6',
+          opacity: 0.8,
         }).addTo(map);
       }
     }

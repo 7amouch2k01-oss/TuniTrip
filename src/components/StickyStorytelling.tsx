@@ -126,7 +126,11 @@ export const StickyStorytelling: React.FC<StickyStorytellingProps> = ({
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#0A4D68] tracking-tight leading-[1.15]">
             One country. <br />
-            <span className="italic font-normal text-[#088395]">A thousand ways to experience it.</span>
+            <span className="relative inline-block mt-1">
+              <span className="italic font-normal bg-gradient-to-r from-[#088395] via-[#0A4D68] to-[#C5A059] bg-clip-text text-transparent">
+                A thousand ways to experience it.
+              </span>
+            </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium">
             Whether you seek peaceful Mediterranean waters, world-class Roman ruins, high-energy family amusement, or desert silence.

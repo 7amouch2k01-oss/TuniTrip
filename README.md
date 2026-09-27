@@ -1,325 +1,353 @@
-<div align="center">
+# 🇹🇳 TuniTrip — Autonomous AI Travel Research Engine
 
-# 🇹🇳 TuniTrip — AI-Powered Tunisia Travel Planner
-
-<p align="center">
-  <strong>The Intelligent Way to Discover Tunisia.</strong><br>
-  <em>Next-generation autonomous travel architect designed for international visitors, families, and travelers.</em>
-</p>
-
-<!-- Animated Typing Subtitle -->
-<p align="center">
-  <a href="https://github.com/7amouch2k01-oss/TuniTrip">
-    <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=700&size=22&duration=3000&pause=1200&color=0A4D68&center=true&vCenter=true&width=650&height=45&lines=Discover+Tunisia%2C+Your+Way.;Autonomous+AI+Travel+Architect;Grounded+in+UNESCO+%26+ONTT+Data;Multi-Currency+Budget+Guardrails;Zero-Pressure+Explicit+Bookings." alt="Typing SVG" />
-  </a>
-</p>
-
-<!-- Shields / Badges -->
-<p align="center">
-  <a href="https://github.com/7amouch2k01-oss/TuniTrip/stargazers"><img src="https://img.shields.io/github/stars/7amouch2k01-oss/TuniTrip?style=for-the-badge&color=D4AF37&logo=github" alt="Stars"></a>
-  <a href="https://github.com/7amouch2k01-oss/TuniTrip/network/members"><img src="https://img.shields.io/github/forks/7amouch2k01-oss/TuniTrip?style=for-the-badge&color=0A4D68&logo=github" alt="Forks"></a>
-  <img src="https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19">
-  <img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/TailwindCSS-v4.0-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Vite-v8.3-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/Testing-100%25%20Pass-10B981?style=for-the-badge&logo=jest&logoColor=white" alt="Tests">
-  <img src="https://img.shields.io/badge/License-MIT-088395?style=for-the-badge" alt="License">
-</p>
-
-<p align="center">
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-core-capabilities">Core Capabilities</a> •
-  <a href="#-product-architecture">Architecture</a> •
-  <a href="#-tested-investor-scenario">Investor Scenario</a> •
-  <a href="#-verified-destinations">Destinations</a> •
-  <a href="#-tech-stack">Tech Stack</a>
-</p>
+> **Minimalist Monochrome Edition (ChatGPT Style)**  
+> *A self-contained, presentation-ready Autonomous AI Travel Agent and Research Engine for Tunisia.*
 
 ---
 
-</div>
+## 📌 1. Overview & Philosophy
 
-## 📌 Executive Summary
+**TuniTrip** is an autonomous travel research engine paired with a real-time digital workspace. It allows travelers to plan complex, personalized journeys across Tunisia entirely through natural language conversation.
 
-**TuniTrip** is a presentation-ready Tunisian travel platform built for foreign visitors and travelers who want to explore Tunisia through natural conversation, verified cultural insights, strict budget guardrails, and realistic geographical itineraries.
-
-Rather than acting as a generic chatbot or static search dashboard, TuniTrip pairs an **Autonomous AI Travel Architect** side-by-side with an **Interactive Digital Notebook Workspace**. 
-
-```
-User Prompt (Natural Language)
-      │
-      ▼
-AI Researches (Semantic RAG on UNESCO & ONTT Knowledge)
-      │
-      ▼
-AI Understands Preferences (Family, Theme Parks, Calm Swimming, Budget: $2,450)
-      │
-      ▼
-AI Recommends Curated Options (Carthage Land, Hasdrubal Thalassa, El Jem)
-      │
-      ▼
-Trip Workspace Synchronizes (7-Day Realistic Schedule + Leaflet Interactive Map)
-      │
-      ▼
-Budget Calculates Live (Itemized Accommodations, Transfers, Passes, Buffer)
-      │
-      ▼
-Stage 4 Explicit Confirmation (Zero Unintended Charges, Verified Partner Vouchers)
-```
+### The Core Philosophy
+* **The AI works AUTOMATICALLY:** The user does NOT manually select dropdowns, categories, filters, hotel star ratings, or travel styles. The user simply expresses their desires in free-form natural language (e.g., *"We are a family of 4 with a $2,450 budget, we love Disneyland-style theme parks, history, swimming, and quiet places"*).
+* **The complexity belongs inside the AI:** The engine automatically extracts constraints, infers semantic categories (e.g., "Disneyland" $\to$ theme parks, water slides; "calm" $\to$ quiet beaches; "history" $\to$ UNESCO Roman amphitheaters), queries live knowledgebases in parallel, applies 7-factor weighted ranking, clusters stops geographically to eliminate transit fatigue, and calculates itemized budgets with safety buffers.
+* **The user experience remains extremely simple:** Pure black-and-white minimalist design inspired by **ChatGPT**, with a dark sidebar on the left, an open conversational thread in the center with observable research traces, and an on-demand slide-over structured plan workspace.
 
 ---
 
-## 🌟 Key Highlights & Innovations
-
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🏛️ Authentic Grounding Layer (RAG)</h3>
-      <p>Every activity, stay, and fee is grounded in authoritative Tunisian datasets from <strong>UNESCO World Heritage</strong>, <strong>Tunisian National Tourist Office (ONTT)</strong>, <strong>Carthage Land Official Park Authorities</strong>, and verified 4★ & 5★ hotel partners.</p>
-    </td>
-    <td width="50%">
-      <h3>⏱️ Geographically Conscious Pacing</h3>
-      <p>Calculates real driving times across Tunisian regions (Tunis-Carthage Airport to Hammamet in 50 min; Hammamet to El Jem in 90 min). Never schedules impossible travel leaps or exhausting daily jumps.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>💰 Dynamic Multi-Currency Budget Engine</h3>
-      <p>Live recalculations in <strong>USD ($)</strong>, <strong>EUR (€)</strong>, <strong>GBP (£)</strong>, and <strong>Tunisian Dinars (TND)</strong>. Itemizes accommodation, activities, private minivan transfers, food, and extras with a dedicated safe buffer.</p>
-    </td>
-    <td width="50%">
-      <h3>🛡️ 5-Stage Consumer Protection Flow</h3>
-      <p>Zero accidental financial transactions. TuniTrip mandates an explicit Stage 4 review where travelers authorize reservations before official reference vouchers (<code>TN-HTL-7741</code>, <code>CL-PAS-9921</code>, <code>TN-TRN-3418</code>) are generated.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🗺️ Synchronized Leaflet Mapping</h3>
-      <p>Custom Mediterranean teal and gold pins, interactive route polylines, and popups synchronized directly with active day timeline selections.</p>
-    </td>
-    <td width="50%">
-      <h3>✨ 4 Strategic Plan Modes</h3>
-      <p>Instantly toggles between 4 strategically distinct itineraries: <em>Family Adventure ($1,480)</em>, <em>Calm Coast ($1,390)</em>, <em>Heritage & Imperial ($1,560)</em>, and <em>Budget-Smart ($1,150)</em>.</p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 🏗️ Product Architecture
+## 🏗️ 2. High-Level System Architecture
 
 ```mermaid
 flowchart TD
-    classDef input fill:#FAF7F2,stroke:#0A4D68,stroke-width:2px,color:#0A4D68;
-    classDef agent fill:#0A4D68,stroke:#D4AF37,stroke-width:2px,color:#FFFFFF;
-    classDef rag fill:#088395,stroke:#0A4D68,stroke-width:2px,color:#FFFFFF;
-    classDef workspace fill:#FAF7F2,stroke:#088395,stroke-width:2px,color:#1E293B;
-    classDef booking fill:#D4AF37,stroke:#0A4D68,stroke-width:2px,color:#0A4D68;
-
-    User["Natural Language Input<br/><i>'7 days with family, love Carthage Land & swimming, budget $2,450'</i>"]:::input
+    User([User Natural Language Prompt]) --> ChatUI[ChatInterface.tsx - ChatGPT Monochrome]
     
-    subgraph AgentOrchestrator ["Autonomous AI Travel Architect (travelAgent.ts)"]
-        Parser["Entity & Intent Extractor<br/>(Travelers: 4, Budget: $2,450, Pacing: Balanced)"]:::agent
-        RAG["Domain Semantic Search & Synonym Expansion<br/>(ragEngine.ts)"]:::rag
-        Knowledge["Curated Knowledge Base (40+ Places)<br/>(UNESCO, ONTT, Carthage Land)"]:::rag
-        Planner["Geographical Itinerary Engine (7 Days)<br/>(itineraryEngine.ts)"]:::agent
-        BudgetEng["Multi-Currency Budget Engine<br/>(budgetEngine.ts)"]:::agent
+    subgraph Frontend [Frontend Layer - React 19 + TypeScript + Tailwind v4]
+        ChatUI <--> PlanSidebar[PlanSidebar.tsx - Dark #171717 Rail]
+        ChatUI <--> DrawerToggle{Workspace Open?}
+        DrawerToggle -- Yes --> TripWorkspace[TripWorkspace.tsx - Structured Plan Drawer]
+        TripWorkspace --> ItineraryView[Day-by-Day Timeline]
+        TripWorkspace --> MapView[InteractiveMap.tsx - CartoDB Positron Grayscale]
+        TripWorkspace --> BudgetView[Budget Breakdown & Buffer]
+        TripWorkspace --> BookingsView[Itemized Reservations]
+        TripWorkspace --> PlansHub[PlansHubView.tsx - Confirmed vs Draft]
     end
 
-    subgraph DualWorkspace ["Trip Architect Unified Command Center"]
-        AIPanel["AI Architect Chat Stream<br/>• Structured Recommendations<br/>• 'Why It Matches' Rationale<br/>• Mode Pills Switcher"]:::workspace
-        TripPanel["Personalized Trip Workspace<br/>• Itinerary Timeline with Photos & Driving Times<br/>• Live Leaflet Interactive Map<br/>• Budget Breakdown & Distribution<br/>• Itemized Bookings Checklist"]:::workspace
+    ChatUI --> TravelAgent[travelAgent.ts - Autonomous Pipeline Orchestrator]
+
+    subgraph BackendEngine [Backend Layer - Autonomous Research Engine]
+        TravelAgent --> S1[Stage 1: NLP Intent Understanding]
+        S1 --> S2[Stage 2: Semantic Category Expansion]
+        S2 --> S3[Stage 3: Targeted Search Plan & Query Formulation]
+        S3 --> S4[Stage 4: Parallel Multi-Provider Live Search]
+        S4 --> S5[Stage 5: Normalization & Deduplication]
+        S5 --> S6[Stage 6: 7-Factor Weighted Ranking Engine]
+        S6 --> S7[Stage 7: Geographic Pacing & Route Clustering]
+        S7 --> S8[Stage 8: Dynamic Multi-Currency Budget Engine]
+        S8 --> S9[Stage 9: Proactive Insight Generator]
+        S9 --> S10[Stage 10: Explicit Stage 4 Booking Verification]
     end
 
-    BookingModal["Stage 4 & 5 Explicit Confirmation Modal<br/>(BookingConfirmationModal.tsx)<br/>Itemized Review ➔ Protected Vouchers"]:::booking
-
-    User --> Parser
-    Parser --> RAG
-    RAG --> Knowledge
-    Knowledge --> Planner
-    Planner --> BudgetEng
-    BudgetEng --> AIPanel
-    BudgetEng --> TripPanel
-    AIPanel <-->|Connected Micro-Interactions| TripPanel
-    TripPanel --> BookingModal
+    BackendEngine --> OutputState[TripPlan State Update]
+    OutputState --> ChatUI
 ```
 
 ---
 
-## 🎯 Tested Investor & Stakeholder Presentation Scenario
+## 📂 3. Repository Directory Structure
 
-The platform comes with a dedicated **"Try Demo Trip"** flow that simulates an end-to-end conversation:
-
-```markdown
-1. USER INITIAL PROMPT:
-   "Hello I wanna visit Tunisia for 7 days with 3 other family members. We love playing games like Disneyland or Carthage Land games. We love history and swimming and calm places. My budget is 2450 dollars."
-
-   ✔ Profile Extracted: 4 Travelers · 7 Days · $2,450 USD Target · Family Trip
-   ✔ RAG Top Match: Carthage Land Yasmine Hammamet (4.6★) & Hasdrubal Thalassa & Spa (4.8★)
-   ✔ Budget Computed: $2,146 Total Est. with $304 safe buffer (88% of target)
-   ✔ Itinerary: 7 geographically sequenced days (Tunis ➔ Carthage ➔ Hammamet ➔ Sousse ➔ El Jem ➔ Monastir)
-
-2. CONVERSATIONAL ADJUSTMENT 1 (Accommodation Rerouting):
-   "I like this plan but I don't want to stay in Tunis"
-   ✔ Agent reroutes accommodation directly to calm beachfront resort in Yasmine Hammamet.
-
-3. CONVERSATIONAL ADJUSTMENT 2 (Activity Swap):
-   "Keep the hotel in Hammamet but replace the second activity"
-   ✔ Agent intelligently preserves the Hammamet hotel while swapping the second activity with private catamaran sailing & calm cove swimming.
-
-4. EXPLICIT STAGE 4 CONFIRMATION:
-   "Perfect. Book it."
-   ✔ Triggers zero-charge explicit confirmation review with itemized vouchers:
-     • Hasdrubal Thalassa Suite (Ref: TN-HTL-7741)
-     • Carthage Land Combo Passes (Ref: CL-PAS-9921)
-     • Private Chauffeur Minivan (Ref: TN-TRN-3418)
+```
+TuniTrip/
+├── index.html                     # HTML root entry with Inter font
+├── package.json                   # Dependencies (React 19, Lucide, Leaflet, Vite 8)
+├── tsconfig.json                  # TypeScript compiler settings
+├── vite.config.ts                 # Vite bundler configuration
+│
+├── src/
+│   ├── main.tsx                   # React DOM application mount
+│   ├── App.tsx                    # Dedicated Full-Screen AI Agent Page & Layout
+│   ├── index.css                  # Pure monochrome styling & scrollbars
+│   ├── types/
+│   │   └── index.ts               # Complete TypeScript interfaces & domain models
+│   │
+│   ├── components/                # FRONTEND LAYER (Pure Monochrome / ChatGPT UI)
+│   │   ├── ChatInterface.tsx      # ChatGPT conversational thread & tool step traces
+│   │   ├── PlanSidebar.tsx        # Signature #171717 dark sidebar with conversation chats
+│   │   ├── TripWorkspace.tsx      # Slide-out drawer: Itinerary, Map, Budget, Bookings
+│   │   ├── InteractiveMap.tsx     # CartoDB Positron grayscale Leaflet map
+│   │   ├── PlansHubView.tsx       # Verified portfolio: Confirmed vs Pending trips
+│   │   ├── BookingConfirmationModal.tsx # Explicit 2-stage consumer authorization
+│   │   ├── PlaceDetailModal.tsx   # Destination inspector modal
+│   │   └── SettingsModal.tsx      # Currency (USD/EUR/GBP/TND) & API key settings
+│   │
+│   ├── services/                  # BACKEND LAYER (Autonomous Research Engine)
+│   │   ├── travelAgent.ts         # Central pipeline orchestrator & multi-plan manager
+│   │   ├── nlpIntentEngine.ts     # Natural language parsing & semantic category expansion
+│   │   ├── liveSearchProvider.ts  # Parallel search, deduplication & normalization
+│   │   ├── rankingAndOptimizationEngine.ts # 7-factor weighted scoring algorithm
+│   │   ├── budgetEngine.ts        # Itemized pricing, buffer calculation & currency conversion
+│   │   ├── itineraryEngine.ts     # Realistic transit times & geographic clustering
+│   │   ├── ragEngine.ts           # UNESCO & ONTT verified knowledgebase retrieval
+│   │   └── geminiService.ts       # Optional LLM integration (fallback to deterministic engine)
+│   │
+│   ├── data/
+│   │   └── places.ts              # Curated, authoritative Tunisian destination dataset
+│   │
+│   └── tests/                     # AUTOMATED VERIFICATION SUITES
+│       ├── autonomousEngine.test.ts # 8-stage end-to-end autonomous engine verification
+│       ├── multiPlan.test.ts        # Multi-plan isolation & independent chat testing
+│       └── scenario.test.ts         # Section 19 Investor benchmark scenario
 ```
 
 ---
 
-## 🇹🇳 Curated Destinations Grounded in Knowledge Base
+## 💻 4. Frontend Architecture (Detailed Breakdown)
 
-| Destination | Highlights | Curated Activities & Stays | Verified Source |
-| :--- | :--- | :--- | :--- |
-| **Tunis & Sidi Bou Said** | Blue-and-white cliffside village, panoramic sea views, Café des Délices | Sidi Bou Said Walking Tour, Medina of Tunis, Bardo Mosaic Palace, Dar El Jeld | ONTT & UNESCO World Heritage |
-| **Carthage** | Punic naval ports, Roman baths, Byrsa Hill acropolis | Roman Baths of Antoninus, Carthage National Museum | UNESCO World Heritage |
-| **Yasmine Hammamet** | Golden sand beaches, Mediterranean sea, modern marina & entertainment | Carthage Land Theme Park, Aqua Land, Hasdrubal Thalassa & Spa, Hammamet Medina | Carthage Land & ONTT |
-| **Sousse & Monastir** | Ribat fortress, UNESCO Medina, Port El Kantaoui marina | Pirate Ship Catamaran Cruise, Monastir Ribat & Mausoleum, Medina of Sousse | Ministry of Cultural Affairs |
-| **El Jem** | 3rd-century Imperial Roman Amphitheatre (Colosseum) | Colosseum Exploration, El Jem Archaeological Museum mosaics | UNESCO World Heritage |
-| **Djerba Island** | Tranquil beaches, olive groves, whitewashed villages, synagogues | Radisson Blu Palace Thalasso, Djerbahood Street Murals, Houmt Souk | Djerba Tourism Board |
+The frontend is built to mimic the clean, distraction-free aesthetic of **ChatGPT**:
+
+### 4.1 Design System & Color Palette
+- **Monochrome Only:** No saturated blues, teals, oranges, or golds. The interface exclusively uses:
+  - Deep Dark: `#171717`, `#212121`, `#0a0a0a`
+  - Crisp White: `#ffffff`
+  - Neutral Grayscale: `neutral-50`, `neutral-100`, `neutral-200`, `neutral-300`, `neutral-400`, `neutral-500`, `neutral-700`, `neutral-900`
+- **Map:** Grayscale CartoDB Positron tiles (`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png`) with high-contrast black and dark-gray pins.
+- **Images:** Subtle grayscale filter applied with hover contrast.
+
+### 4.2 Key Frontend Components
+
+#### 1. `src/App.tsx` (Root Orchestrator)
+- Manages the full-screen view (`h-screen overflow-hidden flex bg-white`).
+- Holds multi-plan state:
+  ```typescript
+  const [plans, setPlans] = useState<TripPlan[]>(travelAgent.getDefaultPlans('USD'));
+  const [activePlanId, setActivePlanId] = useState<string>('plan-family-coastal');
+  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(true);
+  ```
+- Dynamically resizes the center chat interface: when workspace is open, the chat accommodates the workspace side-by-side; when closed, the chat expands to full width with a centered `max-w-3xl` reading lane.
+- Mounts global modals for Booking Confirmation, Place Details, and Settings.
+
+#### 2. `src/components/PlanSidebar.tsx` (Conversation Drawer)
+- Fixed left navigation rendered in `#171717` dark background.
+- Features:
+  - `+ New trip chat` button (spawns an independent conversation with its own itinerary).
+  - Search input for trips by name or destination.
+  - Filter pills: `All`, `Confirmed`, `Draft`.
+  - Conversation list displaying plan title, destination, status indicator (white dot for confirmed, gray dot for draft), and estimated total.
+  - Quick action to delete chat or open Settings modal.
+  - Collapsible into a compact 56px icon rail.
+
+#### 3. `src/components/ChatInterface.tsx` (Conversational Hub)
+- Displays message history between user and assistant.
+- **Deep Research Step Trace:** Accordion (`⚡ Autonomous Research Process (X steps completed)`) revealing step-by-step observable tools:
+  - `[intent_understanding]` $\to$ `[infer_semantic_categories]` $\to$ `[generate_search_plan]` $\to$ `[parallel_live_search]` $\to$ `[multi_criteria_ranking]` $\to$ `[geographic_route_optimization]` $\to$ `[calculate_trip_budget]`.
+- **Recommendation Cards:** High-contrast cards with photo, price, rating, match reason, and direct link to source.
+- **Proactive Insights:** Distinct callout boxes highlighting route synergy, ticket combo discounts, and budget safety buffers.
+- **Floating Input Box:** Pill-shaped input with auto-growing textarea and circular black send button (`ArrowUp`).
+
+#### 4. `src/components/TripWorkspace.tsx` (Structured Plan Drawer)
+- Toggled on/off with a single button (`PanelRightOpen` / `PanelRightClose`).
+- 5 Specialized Tabs:
+  1. **Itinerary:** Sticky Day selector (Day 01, Day 02...), transit duration banners, scheduled activities, and nightly hotel stay cards.
+  2. **Map:** Full Leaflet map rendered in CartoDB Positron grayscale with route polylines.
+  3. **Budget:** Target user limit, calculated total, remaining safety buffer, utilization bar, and category breakdown (Hotels, Transport, Food, Activities, Extras).
+  4. **Bookings:** Itemized reservations with official supplier reference codes (e.g., `TN-HTL-7741`, `CL-PAS-9921`).
+  5. **Saved Plans:** Renders `PlansHubView.tsx` with confirmed vs pending trips.
 
 ---
 
-## ⚡ Quick Start
+## ⚙️ 5. Backend / Autonomous Research Engine Architecture
 
-### Prerequisites
-* **Node.js**: v18.0.0 or higher
-* **npm**: v9.0.0 or higher
+The backend engine is located in `src/services/` and runs entirely in TypeScript. It is decoupled from any UI framework and can be tested directly from Node.js/CLI.
 
-### Installation & Launch
+### 5.1 The 10-Stage Pipeline Flow
+
+```
+[User Message]
+       │
+       ▼
+1. INTENT UNDERSTANDING (nlpIntentEngine.ts)
+   Extracts: duration, party size, budget, trip type, pace, priorities
+       │
+       ▼
+2. SEMANTIC CATEGORY EXPANSION (nlpIntentEngine.ts)
+   Maps keywords into categories (e.g., "Disneyland" -> theme_park, water_parks)
+       │
+       ▼
+3. TARGETED SEARCH PLAN FORMULATION (nlpIntentEngine.ts)
+   Generates targeted queries, computes nightly hotel budget caps, filters irrelevant regions
+       │
+       ▼
+4. PARALLEL MULTI-PROVIDER SEARCH (liveSearchProvider.ts)
+   Dispatches parallel searches across Curated Places, UNESCO records, and Routes
+       │
+       ▼
+5. NORMALIZATION & DEDUPLICATION (liveSearchProvider.ts)
+   Merges duplicates via source priority, standardizes prices & coordinates
+       │
+       ▼
+6. 7-FACTOR WEIGHTED RANKING (rankingAndOptimizationEngine.ts)
+   Scoring: User Preference (30%), Budget (20%), Location (15%), Rating (15%), 
+            Atmosphere (10%), Family Suitability (5%), Data Freshness (5%)
+       │
+       ▼
+7. GEOGRAPHIC CLUSTERING & ROUTING (itineraryEngine.ts)
+   Groups activities by proximity (Tunis/Carthage/Sidi Bou Said -> Hammamet -> El Jem)
+       │
+       ▼
+8. DYNAMIC BUDGET ENGINE (budgetEngine.ts)
+   Itemizes hotels, activities, transfers, meals, and preserves safety buffer
+       │
+       ▼
+9. PROACTIVE INSIGHT GENERATION (travelAgent.ts)
+   Surfaces money-saving combos, route synergies, and pacing tips
+       │
+       ▼
+10. EXPLICIT STAGE 4 BOOKING VERIFICATION (travelAgent.ts)
+    Strict consumer protection: no payment authorization without user confirmation
+```
+
+### 5.2 Key Backend Services
+
+| Service File | Purpose & Responsibilities |
+|---|---|
+| [`travelAgent.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/travelAgent.ts) | Pipeline orchestrator. Coordinates multi-plan state, processes natural language messages, emits real-time `ToolExecutionStep` updates, handles mode switches (Budget / Balanced / Luxury), and controls Stage 4 booking flow. |
+| [`nlpIntentEngine.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/nlpIntentEngine.ts) | Natural language extractor. Detects numeric values for travelers, days, and budget; classifies trip type (Family/Couple/Solo); infers semantic tags (translates Disneyland $\to$ amusement parks); and generates search plans. |
+| [`liveSearchProvider.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/liveSearchProvider.ts) | Parallel search engine. Dispatches queries to simulated and grounded sources, deduplicates results based on ID and geographic proximity, and standardizes data into `NormalizedPlaceItem`. |
+| [`rankingAndOptimizationEngine.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/rankingAndOptimizationEngine.ts) | 7-factor weighted scoring algorithm. Computes a match percentage for every candidate attraction and hotel, ranking the top curated recommendations. |
+| [`budgetEngine.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/budgetEngine.ts) | Mathematical budget calculator. Computes hotel totals, private minivan transfer costs, activity fees, and meal allowances. Converts dynamically between USD, EUR, GBP, and TND. |
+| [`itineraryEngine.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/itineraryEngine.ts) | Geographic pacing & timetable generator. Computes driving times between Tunisian cities to eliminate backtracking. |
+| [`ragEngine.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/services/ragEngine.ts) | Retrieval-Augmented Generation layer. Queries official ONTT and UNESCO World Heritage knowledge chunks. |
+
+---
+
+## 📊 6. Core Data Models & Schemas
+
+Defined in [`src/types/index.ts`](file:///c:/Users/mosma/Desktop/antigravity/Tunitrip/src/types/index.ts):
+
+### TripPlan Model
+```typescript
+export interface TripPlan {
+  id: string;                          // Unique plan ID (e.g., 'plan-1790502738750')
+  title: string;                       // Descriptive journey title
+  destination: string;                 // Target regions (e.g., 'Hammamet, Tunis & El Jem')
+  status: 'draft' | 'pending_confirmation' | 'confirmed';
+  profile: TripProfile;                // Traveler requirements & preferences
+  itinerary: ItineraryDay[];           // Scheduled days with activities & hotels
+  budget: BudgetBreakdown;             // Itemized cost calculation
+  planModes: PlanMode[];               // Alternative modes (Budget, Balanced, Luxury)
+  activePlanModeId: string;
+  messages: ChatMessage[];             // Isolated conversation history for this plan
+  currentToolSteps: ToolExecutionStep[]; // Observable tool steps currently running
+  bookingConfirmationCode?: string;    // Generated upon Stage 4 authorization
+  confirmedAt?: string;
+}
+```
+
+### Observable ToolExecutionStep Model
+```typescript
+export interface ToolExecutionStep {
+  toolName: string;                    // e.g. 'intent_understanding', 'parallel_live_search'
+  status: 'running' | 'completed' | 'failed';
+  summary: string;                     // Human-readable explanation of tool progress
+  resultCount?: number;                // e.g., 23 places discovered
+  details?: string;
+}
+```
+
+### BudgetBreakdown Model
+```typescript
+export interface BudgetBreakdown {
+  hotelsTotalUSD: number;
+  transportTotalUSD: number;
+  activitiesTotalUSD: number;
+  foodTotalUSD: number;
+  extrasTotalUSD: number;
+  totalEstimatedUSD: number;
+  userBudgetUSD: number;
+  remainingUSD: number;                // Preserved safety cushion
+  percentageUsed: number;
+  costPerTravelerUSD: number;
+  currency: Currency;                  // 'USD' | 'EUR' | 'GBP' | 'TND'
+  isOverBudget: boolean;
+  optimizationAdvice?: string;
+}
+```
+
+---
+
+## 🧪 7. Automated Testing & Verification
+
+The repository contains automated test suites that verify both the autonomous engine pipeline and the multi-plan chat isolation:
+
+### Run the Test Suites:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/7amouch2k01-oss/TuniTrip.git
-cd TuniTrip
+# 1. Verify Autonomous 10-Stage Research Engine
+npx tsx src/tests/autonomousEngine.test.ts
 
-# 2. Install dependencies
+# 2. Verify Multi-Plan Architecture & Isolated Chats
+npx tsx src/tests/multiPlan.test.ts
+
+# 3. Verify Section 19 Investor Benchmark Scenario
+npx tsx src/tests/scenario.test.ts
+```
+
+### Test Coverage Highlights:
+- **Test 1:** Natural Language $\to$ Structured Profile extraction & category expansion (4 travelers, 7 days, \$2,450 USD).
+- **Test 2:** Automatic focused search plan & query generation without irrelevant regional queries.
+- **Test 3:** Parallel search, deduplication & normalization across multiple providers.
+- **Test 4:** Multi-criteria 7-factor weighted ranking selecting Carthage Land and Hasdrubal Thalassa in top ranks.
+- **Test 5:** Full pipeline execution with 14 emitted observable tool steps and proactive insights.
+- **Test 6:** Section 24 single-variable incremental updates (modifying budget, travelers, or pace without resetting conversation).
+- **Test 7:** Section 23 catalog retrieval on request ("Show me everything you found").
+- **Test 8:** Stage 4 explicit booking verification handoff without fake transaction claims.
+
+---
+
+## 🚀 8. Extraction & Migration to a Dedicated Repository
+
+To extract this autonomous AI travel agent into a new standalone repository:
+
+### Step 1: Copy Core Folders
+Copy the following directory contents to your new repository directory:
+```bash
+cp -r src/ <target-repo>/src/
+cp package.json <target-repo>/package.json
+cp tsconfig.json <target-repo>/tsconfig.json
+cp tsconfig.app.json <target-repo>/tsconfig.app.json
+cp tsconfig.node.json <target-repo>/tsconfig.node.json
+cp vite.config.ts <target-repo>/vite.config.ts
+cp index.html <target-repo>/index.html
+```
+
+### Step 2: Install Dependencies
+```bash
+cd <target-repo>
 npm install
+```
 
-# 3. Start local development server
+### Step 3: Run and Build
+```bash
+# Run local dev server
 npm run dev
-```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### Run Automated Scenario Verification Suite
-
-```bash
-npm test
-```
-
-Expected output:
-```bash
-====================================================
-RUNNING TUNITRIP INVESTOR & USER SCENARIO TEST SUITE
-====================================================
-✓ [1] Extracted Profile: 4 Guests, 7 Days, $2450 USD Target
-✓ [2] Verifying RAG Search: Carthage Land, Hammamet Plage, Hasdrubal Thalassa
-✓ [3] Verifying Budget Engine: $2,146 Total Est. with $304 safe buffer
-✓ [4] Verifying 7-Day Geographical Itinerary Pacing (7 full days)
-✓ [5] Verifying 4 Distinct Strategic Plan Modes
-✓ [6] Testing Conversational Modification 1 (Reroute away from Tunis)
-✓ [7] Testing Conversational Modification 2 (Swap activity, preserve hotel)
-✓ [8] Testing Booking Confirmation Trigger (Explicit Stage 4 flow)
-====================================================
-ALL TUNITRIP SCENARIO TESTS PASSED WITH 100% SUCCESS!
-====================================================
-```
-
-### Production Build
-
-```bash
+# Run production build
 npm run build
 ```
 
 ---
 
-## 📁 Repository Structure
+## 🤖 9. Guidelines for Future AI Agents & Developers
 
-```
-TuniTrip/
-├── public/                      # Static SVG icons and favicon
-├── src/
-│   ├── assets/                  # Hero and scenic assets
-│   ├── components/              # Editorial React UI components
-│   │   ├── BookingConfirmationModal.tsx  # Stage 4 & 5 explicit review & vouchers
-│   │   ├── ChatInterface.tsx             # Flagship V3 sticky AI Travel Architect
-│   │   ├── ExploreView.tsx               # Curated Tunisian destination catalog
-│   │   ├── Footer.tsx                    # Mediterranean editorial footer
-│   │   ├── HeroLanding.tsx               # Cinematic full-bleed landing hero
-│   │   ├── InteractiveMap.tsx            # Leaflet interactive map with custom pins
-│   │   ├── Navbar.tsx                    # Sticky navigation with multi-currency picker
-│   │   ├── PlaceDetailModal.tsx          # Magazine-style modal with photo galleries
-│   │   ├── SavedPlacesView.tsx           # Saved bookmark collection
-│   │   ├── SettingsModal.tsx             # Language, currency & API configuration
-│   │   ├── StickyDestinationStory.tsx    # Interactive destination index
-│   │   ├── StickyStorytelling.tsx        # Pinned crossfade scroll storytelling
-│   │   ├── TripWorkspace.tsx             # Personalized trip command center (Tabs)
-│   │   └── UnforgettableExperiences.tsx  # Handpicked experiences grid
-│   ├── data/
-│   │   └── knowledgeBase.ts              # 40+ curated places with verified citations
-│   ├── services/
-│   │   ├── budgetEngine.ts               # Multi-currency live calculation engine
-│   │   ├── itineraryEngine.ts            # 7-day geographically paced route engine
-│   │   ├── ragEngine.ts                  # Semantic domain search & synonym matcher
-│   │   └── travelAgent.ts                # Autonomous conversational agent
-│   ├── tests/
-│   │   └── scenario.test.ts              # End-to-end automated scenario test suite
-│   ├── types/
-│   │   └── index.ts                      # Strict TypeScript data contracts
-│   ├── App.tsx                           # Master application shell
-│   ├── index.css                         # Tailwind CSS v4 design tokens & keyframes
-│   └── main.tsx                          # React entry point
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
+If you are an AI agent extending or modifying this codebase:
 
----
-
-## 🎨 Visual Identity & Design Principles
-
-* **Palette:**
-  * **Primary:** Mediterranean Deep Teal (`#0A4D68`, `#088395`)
-  * **Secondary:** Warm Sand & Ivory (`#FAF7F2`, `#EADBCE`)
-  * **Accent:** Muted Tunisian Gold (`#D4AF37`, `#C5A059`)
-  * **Supporting:** Soft Terracotta (`#D96B43`), Crisp White (`#FFFFFF`), Charcoal Slate (`#1E293B`)
-* **Typography:**
-  * **Headings:** *Playfair Display* & *Cormorant Garamond* (Editorial Travel Magazine)
-  * **Interface & Body:** *Plus Jakarta Sans* & *Outfit* (High-legibility modern UI)
-  * **Handwritten Accents:** *Caveat* (*"Ahlan wa Sahlan"*, *"Tunisia is waiting"*)
-* **Strict Avoidance:** No generic purple AI gradients, no neon cyberpunk, no cramped SaaS boxes, and no deceptive auto-charging.
-
----
-
-## 🗺️ Product Roadmap
-
-- [x] **Phase 1: MVP Core** — Autonomous AI Agent, RAG Knowledge Base, 7-Day Itinerary Engine, Budget Engine.
-- [x] **Phase 2: UI/UX V2** — Sticky scroll storytelling, luxury destination showcase, interactive Leaflet map.
-- [x] **Phase 3: Flagship Workspace V3** — Sticky AI Travel Architect, unified command center, itemized booking vouchers, test suite.
-- [ ] **Phase 4: Real-Time Partner APIs** — Direct live integration with Amadeus hotel inventory and Carthage Land ticketing.
-- [ ] **Phase 5: Multilingual Expansion** — Native French and Tunisian Arabic (*Derja*) voice agent integration.
+1. **Strict Monochrome Rule:** Never introduce saturated theme colors (no blue/gold/teal gradients). Use pure white, neutral grays (`neutral-100` through `neutral-900`), and pure black (`#171717` or `#000000`).
+2. **Never Force User Configuration:** The AI must extract destination, travelers, duration, categories, and constraints automatically from natural language. Do not re-add mandatory setup wizards or filters.
+3. **Preserve Observable Tool Steps:** When adding new analytical capabilities, emit progress steps via the `onToolStep` callback in `travelAgent.ts` so the user can see what the agent is researching.
+4. **Maintain Explicit Stage 4 Verification:** Never set `bookingStatus = 'confirmed'` automatically. Always present the itemized review summary and wait for user authorization.
+5. **Decoupled Architecture:** Keep business logic inside `src/services/` and UI presentation inside `src/components/`. All backend services must remain runnable standalone via `npx tsx`.
 
 ---
 
 ## 📄 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
-
----
-
-<div align="center">
-  <p>Crafted with pride for Tunisia 🇹🇳 • Designed for world-class tourism presentations</p>
-  <p><strong><a href="https://github.com/7amouch2k01-oss/TuniTrip">⭐ Star TuniTrip on GitHub</a></strong></p>
-</div>
+This project is open-source under the [MIT License](LICENSE).
