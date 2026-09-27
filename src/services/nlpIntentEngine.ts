@@ -1,6 +1,10 @@
 import { Currency, StructuredTripProfile, ResearchSearchPlan, TripProfile, PlaceCategory } from '../types';
 
 export class NLPIntentEngine {
+  public extractTripProfile(userMessage: string): StructuredTripProfile {
+    return this.extractStructuredProfile(userMessage).structuredProfile;
+  }
+
   /**
    * Main entrypoint: Understands user message in natural language,
    * performs semantic category inference, and produces a structured trip profile.

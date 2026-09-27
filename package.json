@@ -11,7 +11,8 @@
     "test": "tsx src/tests/scenario.test.ts",
     "typecheck": "tsc -b",
     "smoke": "tsx src/tests/smoke.test.ts",
-    "verify": "tsx src/tests/verify.test.ts"
+    "verify": "tsx src/tests/verify.test.ts",
+    "test:orchestrator": "tsx src/tests/aiOrchestrator.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.2",
@@ -21,6 +22,7 @@
     "canvas-confetti": "^1.9.4",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.48.0",
+    "openai": "^7.23.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"

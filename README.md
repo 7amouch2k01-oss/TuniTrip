@@ -375,10 +375,58 @@ NovaOrchestrator (src/nova/core/orchestrator.ts)
 ### Verification & Testing
 Run the complete automated verification suite:
 ```bash
-npm run typecheck   # TypeScript strict check (0 errors)
-npm run smoke       # Core components lifecycle smoke test
-npm run verify      # Full 13-test architectural invariant suite
+npm run typecheck          # TypeScript strict check (0 errors)
+npm run smoke              # Core components lifecycle smoke test
+npm run verify             # Full 13-test architectural invariant suite
+npm run test:orchestrator  # Multi-Model, Multi-Tool 10-Scenario Evaluation Suite
 ```
+
+---
+
+## 🧠 11. Multi-Model, Multi-Tool Autonomous Research Orchestrator
+
+The production AI orchestration engine is located in [`src/services/ai/`](file:///src/services/ai/), [`src/services/providers/`](file:///src/services/providers/), [`src/services/tools/`](file:///src/services/tools/), and [`src/services/research/`](file:///src/services/research/):
+
+```
+USER MESSAGE
+     │
+     ▼
+Conversation Context & History
+     │
+     ▼
+Intent + Complexity Router (QueryPlanner)
+  ├── 'greeting'           ──> FAST_CHAT (0 external tools)
+  ├── 'general_question'   ──> Curated RAG / Fast Model
+  ├── 'weather'            ──> Live Open-Meteo Meteorology
+  ├── 'hotel_search'       ──> Google Places API (New) + Amenities Filter
+  ├── 'restaurant_search'  ──> Google Places API (New) + Live Hours
+  └── 'trip_planning'      ──> Parallel Multi-Tool Research
+                                 ├── Google Places API (New)
+                                 ├── Web Search (Google-grounded / Tavily / Serper)
+                                 ├── Google Routes API (Live Road Transit)
+                                 ├── Live Weather Service (Open-Meteo)
+                                 ├── Foreign Exchange Rates (BCT / Open Exchange)
+                                 └── Hybrid RAG Knowledge Base
+                                 │
+                                 ▼ (Promise.allSettled)
+                       Evidence Normalizer (EvidenceItem[])
+                                 │
+                                 ▼
+                       Deduplication & Cross-Source Verification
+                                 │ (detects hour/price conflicts)
+                                 ▼
+                       7-Factor Weighted Ranking & Geographic Pacing
+                                 │
+                                 ▼
+                       Final Synthesizer & Clickable Citations
+```
+
+### Supported Providers & Roles
+- **OpenAI**: `gpt-4o-mini` (Fast Chat), `gpt-4o` (Reasoner, Critic, Synthesizer).
+- **Google Gemini**: `gemini-1.5-flash` with Google Search & Maps Grounding.
+- **Anthropic**: `claude-3-5-sonnet` via Messages API.
+- **Local Fallback**: Zero-credential offline resilience with hybrid RAG.
+- **Provider Fallback**: Automatic failover (Primary $\to$ Secondary $\to$ Local Fallback).
 
 ---
 

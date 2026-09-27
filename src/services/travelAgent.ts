@@ -20,6 +20,8 @@ import { ragService } from './ragEngine';
 import { nlpIntentEngine } from './nlpIntentEngine';
 import { liveSearchProvider } from './liveSearchProvider';
 import { rankingEngine } from './rankingAndOptimizationEngine';
+import { aiOrchestrator } from './ai/orchestrator';
+import { QueryPlanner } from './research/queryPlanner';
 
 export class TravelAgent {
   private currentProfile: TripProfile = {
@@ -260,6 +262,37 @@ export class TravelAgent {
     }
 
     // ==========================================
+    // GENERAL-PURPOSE AI ORCHESTRATION ROUTER
+    // ==========================================
+    const searchPlanClassification = QueryPlanner.plan(text);
+    const { structuredProfile, isModification, modificationType } =
+      nlpIntentEngine.extractStructuredProfile(text, this.currentProfile);
+
+    // If it's a general question, greeting, weather inquiry, or standalone place/restaurant search
+    if (
+      !isModification &&
+      searchPlanClassification.intent !== 'trip_planning' &&
+      !lower.includes('plan me') &&
+      !lower.includes('visit tunisia for')
+    ) {
+      const { response: orchResponse } = await aiOrchestrator.orchestrate(
+        text,
+        [],
+        this.currentProfile,
+        onStepUpdate
+      );
+
+      return {
+        ...orchResponse,
+        profile: this.getProfile(),
+        itinerary: this.currentItinerary,
+        budget: this.getBudget(),
+        planModes: this.currentPlanModes,
+        activePlanId: this.activePlanId,
+      };
+    }
+
+    // ==========================================
     // STAGE 1 & 2: INTENT UNDERSTANDING & TRIP PROFILE EXTRACTION
     // ==========================================
     if (onStepUpdate) {
@@ -270,9 +303,6 @@ export class TravelAgent {
       });
       await new Promise((r) => setTimeout(r, 350));
     }
-
-    const { structuredProfile, isModification, modificationType } =
-      nlpIntentEngine.extractStructuredProfile(text, this.currentProfile);
 
     // Sync internal legacy profile
     this.currentProfile.travelers = structuredProfile.travelers;
